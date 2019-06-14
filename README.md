@@ -1,1 +1,5 @@
 # network-programming
+
+To compile the application to a respository you will need to run `gcc -o /bin/rot13 traditional-rot13d-server-client.c` the `-o` flat will output build output to a file for you.
+
+Then to **run** the program enter the `rot13` command to test the program is running correctly you can run `lsof -i` which will give you a list of user processes that are actively using the file system, we know that this is using TCP node and called `"rot13"` which will be displayed under the `COMMAND` column. This also declares the port which is it being run on in the code which is defined as `1067`. This means that we know which port we need to connect to the rot13 server client. If you want to connect directly to the server client you can do so via `telnet localhost 1067` however `modern-rot13d-client.c` will also serve this purpose.
